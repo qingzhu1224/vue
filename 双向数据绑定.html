@@ -20,8 +20,8 @@
                 var TextDom = document.getElementById('text');
                 TextDom.innerHTML = newValue;
             },
-            get: function() {
-                console.log('这是get')
+            get: function(value) {
+                console.log('这是get', value)
             },
         });
         var ContainerDom = document.getElementById('container');
@@ -32,15 +32,12 @@
                 console.log(e.target.value)
             }
         });
-
-
+        data.text = '123';
         // 初始化
         var TextDom = document.getElementById('text');
         TextDom.innerHTML = data.text;
-
-        var InputDom = document.getElementById('inpit');
-        InputDom.innerHTML = data.text;
-
+        var InputDom = document.getElementById('input');
+        InputDom.setAttribute('value', data.text);
     }
 </script>
 </head>
